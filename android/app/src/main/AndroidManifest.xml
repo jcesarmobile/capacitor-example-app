@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="com.getcapacitor.myapp">
+    package="com.example.app">
 
     <application
         android:allowBackup="true"
@@ -11,10 +11,11 @@ package="com.getcapacitor.myapp">
         android:theme="@style/AppTheme">
 
         <activity
-            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
-            android:name="com.getcapacitor.myapp.MainActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
+            android:name="com.example.app.MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBarLaunch">
+            android:theme="@style/AppTheme.NoActionBarLaunch"
+            android:launchMode="singleTask">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,9 +42,10 @@ package="com.getcapacitor.myapp">
         </provider>
     </application>
 
+    <!-- Permissions -->
+
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- Camera, Photos -->
-    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Camera, Photos, input file -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- Geolocation API -->
@@ -52,6 +54,10 @@ package="com.getcapacitor.myapp">
     <uses-feature android:name="android.hardware.location.gps" />
     <!-- Network API -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!-- Vibration API -->
-    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- Navigator.getUserMedia -->
+    <!-- Video -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Audio -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
 </manifest>

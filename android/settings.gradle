@@ -1,5 +1,5 @@
-include ':app', ':android-capacitor'//, ':plugin'
-project(':android-capacitor').projectDir=new File('../../android/capacitor/')
-// Uncomment to test/dev the plugin (make sure to change its dependency on capacitor-android to a local reference)
-// project(':plugin').projectDir=new File('../../plugin-template/android/plugin/')
+include ':app'
+include ':capacitor-cordova-android-plugins'
+project(':capacitor-cordova-android-plugins').projectDir = new File('./capacitor-cordova-android-plugins/')
 
+apply from: 'capacitor.settings.gradle'
